@@ -1,4 +1,4 @@
-# Notarion - Distributed Ledger Technologies Validation
+# notarion - Distributed Ledger Technologies Validation
 
 A full-stack decentralized application (dApp) that enables secure file uploads to a local IPFS node, anchors the Content Identifier (CID) on the blockchain, and maintains metadata in MongoDB. Built with **React + TypeScript**, **Node.js + TypeScript**, and Web3 technologies.
 

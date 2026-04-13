@@ -1,6 +1,6 @@
 {
     "app": {
-        "title": "Notarion - Validazione con Tecnologie a Registro Distribuito"
+        "title": "notarion - Validazione con Tecnologie a Registro Distribuito"
     },
     "wallet": {
         "connect": "Connetti MetaMask",
@@ -64,7 +64,7 @@
     },
     "certificate": {
         "title": "Certificato di Transazione",
-        "subtitle": "Notarion - Verifica di Validazione con Tecnologie a Registro Distribuito",
+        "subtitle": "notarion - Verifica di Validazione con Tecnologie a Registro Distribuito",
         "file_details": "Dettagli del File",
         "file_name": "Nome File:",
         "file_type": "Tipo File:",
@@ -75,7 +75,7 @@
         "wallet_address": "Indirizzo Wallet:",
         "timestamp": "Data e Ora:",
         "footer_1": "Questo documento certifica che il file è stato caricato con successo su IPFS e registrato sulla blockchain di Ethereum.",
-        "footer_2": "Generato da Notarion - DApp di Validazione con Tecnologie a Registro Distribuito"
+        "footer_2": "Generato da notarion - DApp di Validazione con Tecnologie a Registro Distribuito"
     },
     "history": {
         "title": "Cronologia Caricamenti",

@@ -188,7 +188,7 @@ const UploadHistory: React.FC<UploadHistoryProps> = ({ address, refreshTrigger }
                                                         }}
                                                     />
                                                 }
-                                                fileName={`Notarion_${upload.fileName || 'file'}.pdf`}
+                                                fileName={`notarion_${upload.fileName || 'file'}.pdf`}
                                                 className="history-link explorer"
                                             >
                                                 {t('history.view_certificate')}
