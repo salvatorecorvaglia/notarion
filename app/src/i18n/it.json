@@ -1,0 +1,103 @@
+{
+    "app": {
+        "title": "Notarion - Validazione con Tecnologie a Registro Distribuito"
+    },
+    "wallet": {
+        "connect": "Connetti MetaMask",
+        "disconnect": "Disconnetti",
+        "connected_account": "Account connesso"
+    },
+    "dropzone": {
+        "drop_active": "Rilascia il file qui...",
+        "idle": "Trascina e rilascia un file qui, oppure clicca per selezionarne uno."
+    },
+    "file": {
+        "selected_title": "File selezionato",
+        "name": "Nome",
+        "type": "Tipo",
+        "size": "Dimensione",
+        "remove": "Rimuovi file"
+    },
+    "buttons": {
+        "upload": "Carica e Salva Transazione",
+        "uploading": "Caricamento in corso...",
+        "retry_tx": "Riprova Transazione",
+        "retry_db_save": "Riprova Salvataggio Cronologia",
+        "view_ipfs": "Visualizza su IPFS",
+        "download_certificate": "Scarica Certificato",
+        "generating_certificate": "Generazione PDF...",
+        "try_again": "Riprova",
+        "go_home": "Torna alla Home"
+    },
+    "status": {
+        "connect_wallet": "Connetti il tuo wallet per continuare.",
+        "upload_file": "Seleziona un file da caricare.",
+        "uploading_ipfs": "Caricamento su IPFS in corso...",
+        "saving_blockchain": "File caricato su IPFS. Salvataggio transazione sulla Blockchain...",
+        "confirming_tx": "Transazione confermata. Salvataggio nel database...",
+        "success": "Operazione completata con successo!",
+        "tx_success_db_failed": "Transazione riuscita, ma il salvataggio nel database è fallito.",
+        "tx_failed": "Transazione fallita. Riprova.",
+        "ipfs_failed": "Caricamento IPFS fallito. Riprova.",
+        "tx_cancelled": "Transazione annullata dall'utente.",
+        "insufficient_funds": "Fondi insufficienti per la transazione. Ricarica il tuo wallet.",
+        "error": "Si è verificato un errore. Riprova.",
+        "invalid_file_type": "Tipo di file non valido. Carica un file PDF, PNG, JPEG, JSON, ZIP o MP4.",
+        "file_too_large": "Il file supera il limite massimo di {{maxSize}}.",
+        "metamask_not_found": "MetaMask non trovato. Installa l'estensione e riprova.",
+        "wallet_connection_failed": "Connessione al wallet fallita. Riprova.",
+        "network_error": "Impossibile raggiungere il server. Controlla la connessione.",
+        "pending_cid_hint": "⚠️ File già caricato su IPFS (CID: {{cid}}…). Puoi riprovare la transazione blockchain senza ri-caricare il file.",
+        "pending_save_hint": "⚠️ Transazione blockchain completata (Tx: {{tx}}…) ma non salvata in cronologia. Riprova il salvataggio.",
+        "file_already_exists": "Questo documento è già stato caricato in precedenza (CID duplicato)."
+    },
+    "progress": {
+        "uploaded": "{{percent}}% caricato",
+        "phase_ipfs": "Caricamento su IPFS...",
+        "phase_blockchain": "In attesa di conferma blockchain...",
+        "phase_saving": "Salvataggio nel database..."
+    },
+    "error_boundary": {
+        "title": "⚠️ Ops! Qualcosa è andato storto",
+        "description": "Ci dispiace, si è verificato un errore imprevisto. Prova ad aggiornare la pagina.",
+        "details_summary": "Dettagli errore (solo sviluppo)"
+    },
+    "certificate": {
+        "title": "Certificato di Transazione",
+        "subtitle": "Notarion - Verifica di Validazione con Tecnologie a Registro Distribuito",
+        "file_details": "Dettagli del File",
+        "file_name": "Nome File:",
+        "file_type": "Tipo File:",
+        "file_size": "Dimensione File:",
+        "blockchain_details": "Dettagli Blockchain & Archiviazione",
+        "ipfs_cid": "IPFS CID:",
+        "transaction_hash": "Hash di Transazione:",
+        "wallet_address": "Indirizzo Wallet:",
+        "timestamp": "Data e Ora:",
+        "footer_1": "Questo documento certifica che il file è stato caricato con successo su IPFS e registrato sulla blockchain di Ethereum.",
+        "footer_2": "Generato da Notarion - DApp di Validazione con Tecnologie a Registro Distribuito"
+    },
+    "history": {
+        "title": "Cronologia Caricamenti",
+        "no_uploads": "Nessun caricamento trovato per questo wallet.",
+        "loading": "Caricamento cronologia...",
+        "table": {
+            "name": "Nome File",
+            "format": "Formato",
+            "date": "Data",
+            "cid": "CID",
+            "actions": "Azioni"
+        },
+        "view_explorer": "EXPLORER",
+        "view_ipfs": "IPFS",
+        "view_certificate": "CERTIFICATO",
+        "current_address": "Indirizzo attuale",
+        "fetch_error": "Impossibile caricare la cronologia. Controlla la connessione al server.",
+        "load_more": "Carica altri",
+        "copy_success": "Copiato"
+    },
+    "notification": {
+        "error_label": "Errore",
+        "info_label": "Notifica"
+    }
+}

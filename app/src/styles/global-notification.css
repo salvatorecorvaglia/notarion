@@ -1,0 +1,71 @@
+.global-notification-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.global-notification {
+    background-color: #333;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 300px;
+    max-width: 450px;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.global-notification.error {
+    background-color: #ef4444;
+    border-left: 6px solid #b91c1c;
+}
+
+.global-notification.success {
+    background-color: #10b981;
+    border-left: 6px solid #047857;
+}
+
+.global-notification.info {
+    background-color: #3b82f6;
+    border-left: 6px solid #1d4ed8;
+}
+
+.notification-content {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    margin-left: 12px;
+    padding: 0 4px;
+}
+
+.notification-close:hover {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

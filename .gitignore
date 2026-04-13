@@ -1,0 +1,113 @@
+# ==============================
+# Dependencies
+# ==============================
+node_modules/
+.pnp
+.pnp.js
+
+# ==============================
+# Environment variables
+# ==============================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.test
+.env.*.production
+.env.*.staging
+
+# ==============================
+# Testing
+# ==============================
+coverage/
+.nyc_output/
+jest-results/
+playwright-report/
+
+# ==============================
+# Production builds
+# ==============================
+build/
+dist/
+.out/
+.next/
+.vite/
+*.tgz
+
+# ==============================
+# Logs
+# ==============================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ==============================
+# MongoDB
+# ==============================
+db/data/
+mongodb_data/
+data/db/
+*.wt
+*.lock
+
+# ==============================
+# Docker
+# ==============================
+docker-compose.override.yml
+*.env.docker
+
+# ==============================
+# Editor directories and files
+# ==============================
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# ==============================
+# ESLint / Prettier
+# ==============================
+.eslintcache
+.prettiercache
+
+# ==============================
+# TypeScript (if used)
+# ==============================
+*.tsbuildinfo
+
+# ==============================
+# Package manager locks
+# ==============================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ==============================
+# Misc
+# ==============================
+*.bak
+*.orig
+*.rej
+.cache/
