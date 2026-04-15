@@ -62,11 +62,13 @@ docker compose up -d
 ### Option 2: Manual Setup (Development)
 
 **Start Infrastructure (Docker):**
+
 ```bash
 docker compose up -d mongodb ipfs
 ```
 
 **Backend:**
+
 ```bash
 cd server
 npm install
@@ -78,6 +80,7 @@ npm run start:prod  # tsc && NODE_ENV=production node dist/server.js
 ```
 
 **Frontend:**
+
 ```bash
 cd app
 npm install
@@ -91,16 +94,17 @@ npm run preview     # Preview production build locally
 
 ### Backend Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/upload/ipfs` | Upload file to IPFS (multipart/form-data, magic-byte validation) |
-| `POST` | `/api/upload` | Save upload metadata to MongoDB |
-| `GET` | `/api/upload/cid/:cid` | Get upload by CID |
-| `GET` | `/api/upload/wallet/:address` | Get uploads by wallet (paginated) |
-| `GET` | `/api/upload` | Get all uploads (paginated) |
-| `GET` | `/health` | Health check (minimal in production, detailed in development) |
+| Method | Endpoint                      | Description                                                      |
+| ------ | ----------------------------- | ---------------------------------------------------------------- |
+| `POST` | `/api/upload/ipfs`            | Upload file to IPFS (multipart/form-data, magic-byte validation) |
+| `POST` | `/api/upload`                 | Save upload metadata to MongoDB                                  |
+| `GET`  | `/api/upload/cid/:cid`        | Get upload by CID                                                |
+| `GET`  | `/api/upload/wallet/:address` | Get uploads by wallet (paginated)                                |
+| `GET`  | `/api/upload`                 | Get all uploads (paginated)                                      |
+| `GET`  | `/health`                     | Health check (minimal in production, detailed in development)    |
 
 **Rate Limiting:**
+
 - Generic: 100 requests per 15 minutes per IP
 - IPFS upload: 10 requests per 15 minutes per IP
 
@@ -127,6 +131,7 @@ All user-facing strings are localized in `app/src/i18n/it.json` (Italian) and `a
 The app uses [react-i18next](https://react.i18next.com/) with automatic browser language detection and Italian as the default fallback.
 
 To add a new language:
+
 1. Create `app/src/i18n/<code>.json` (same keys as `it.json` and `en.json`)
 2. Add it as a resource in `app/src/i18n/i18n.ts`
 
@@ -156,39 +161,43 @@ cp .env.example .env
 ```
 
 ### Docker / MongoDB
-| Variable | Description | Default |
-|---|---|---|
+
+| Variable                     | Description            | Default |
+| ---------------------------- | ---------------------- | ------- |
 | `MONGO_INITDB_ROOT_USERNAME` | MongoDB admin username | `admin` |
 | `MONGO_INITDB_ROOT_PASSWORD` | MongoDB admin password | `admin` |
 
 ### Backend
-| Variable | Description | Default |
-|---|---|---|
-| `PORT` | Server port | `5002` |
-| `NODE_ENV` | `development`, `production`, or `test` | `development` |
-| `TZ` | Timezone | `Europe/Rome` |
-| `MONGO_URI` | MongoDB connection string | — (required) |
-| `ETH_NETWORK` | Ethereum network name (`mainnet`, `sepolia`, `holesky`) | — (optional) |
-| `IPFS_API_URL` | Local IPFS API URL | `http://localhost:5001` |
-| `IPFS_GATEWAY_URL` | Public IPFS Gateway URL | `http://localhost:8080` |
-| `IPFS_TIMEOUT` | IPFS upload timeout in ms | `60000` |
-| `IPFS_MAX_RETRIES` | Max retry attempts for IPFS upload | `2` |
-| `MAX_FILE_SIZE` | Max file size in bytes | `104857600` (100 MB) |
-| `ALLOWED_ORIGINS` | Comma-separated CORS origins | `http://localhost:3000,http://localhost:3001` |
-| `RATE_LIMIT_WINDOW_MS` | Rate-limit window in ms | `900000` (15 min) |
-| `RATE_LIMIT_MAX_REQUESTS` | Max generic requests per window | `100` |
-| `IPFS_RATE_LIMIT_WINDOW_MS` | Rate-limit window for IPFS uploads in ms | `900000` |
-| `IPFS_RATE_LIMIT_MAX_REQUESTS` | Max IPFS upload requests per window | `10` |
+
+| Variable                       | Description                                             | Default                                       |
+| ------------------------------ | ------------------------------------------------------- | --------------------------------------------- |
+| `PORT`                         | Server port                                             | `5002`                                        |
+| `NODE_ENV`                     | `development`, `production`, or `test`                  | `development`                                 |
+| `TZ`                           | Timezone                                                | `Europe/Rome`                                 |
+| `MONGO_URI`                    | MongoDB connection string                               | — (required)                                  |
+| `ETH_NETWORK`                  | Ethereum network name (`mainnet`, `sepolia`, `holesky`) | — (optional)                                  |
+| `IPFS_API_URL`                 | Local IPFS API URL                                      | `http://localhost:5001`                       |
+| `IPFS_GATEWAY_URL`             | Public IPFS Gateway URL                                 | `http://localhost:8080`                       |
+| `IPFS_TIMEOUT`                 | IPFS upload timeout in ms                               | `60000`                                       |
+| `IPFS_MAX_RETRIES`             | Max retry attempts for IPFS upload                      | `2`                                           |
+| `MAX_FILE_SIZE`                | Max file size in bytes                                  | `104857600` (100 MB)                          |
+| `ALLOWED_ORIGINS`              | Comma-separated CORS origins                            | `http://localhost:3000,http://localhost:3001` |
+| `RATE_LIMIT_WINDOW_MS`         | Rate-limit window in ms                                 | `900000` (15 min)                             |
+| `RATE_LIMIT_MAX_REQUESTS`      | Max generic requests per window                         | `100`                                         |
+| `IPFS_RATE_LIMIT_WINDOW_MS`    | Rate-limit window for IPFS uploads in ms                | `900000`                                      |
+| `IPFS_RATE_LIMIT_MAX_REQUESTS` | Max IPFS upload requests per window                     | `10`                                          |
 
 ### Frontend (`VITE_*`)
-| Variable | Description | Default |
-|---|---|---|
-| `VITE_SERVER_URL` | Backend URL | `http://localhost:5002` |
+
+| Variable                | Description      | Default                 |
+| ----------------------- | ---------------- | ----------------------- |
+| `VITE_SERVER_URL`       | Backend URL      | `http://localhost:5002` |
 | `VITE_IPFS_GATEWAY_URL` | IPFS gateway URL | `http://localhost:8080` |
 
 ## 🧰 Development Scripts
 
 ### Frontend (`app/`)
+
 ```bash
 npm start          # Vite dev server (port 3000, auto-opens browser)
 npm run build      # Production bundle (tsc + vite build)
@@ -199,6 +208,7 @@ npm run format     # Prettier
 ```
 
 ### Backend (`server/`)
+
 ```bash
 npm start          # nodemon + ts-node --transpile-only (dev, hot-reload)
 npm run build      # tsc → dist/
