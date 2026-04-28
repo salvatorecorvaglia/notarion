@@ -10,6 +10,8 @@ import { errorHandler, AppError, ERROR_CODES } from './middleware/errorHandler';
 import { requestId, requestLogger } from './middleware/requestLogger';
 import compression from 'compression';
 import logger from './utils/logger';
+import { version } from './package.json';
+
 
 const app = express();
 
@@ -89,7 +91,7 @@ app.get('/health', (_req, res) => {
         uptime: Math.floor(process.uptime()),
         database: { status: dbStatus, name: mongoose.connection.name || 'N/A' },
         environment: config.NODE_ENV,
-        version: process.env.npm_package_version || '1.0.0',
+        version: process.env.npm_package_version || version,
         memory: {
             heapUsed: `${Math.round(mem.heapUsed / 1024 / 1024)}MB`,
             heapTotal: `${Math.round(mem.heapTotal / 1024 / 1024)}MB`,
