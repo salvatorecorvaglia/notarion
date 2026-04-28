@@ -4,7 +4,6 @@ dist/
 .env.*
 .git/
 .eslintcache
-.prettiercache
 coverage/
 *.test.ts
 *.test.tsx

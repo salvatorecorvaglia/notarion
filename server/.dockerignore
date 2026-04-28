@@ -5,7 +5,6 @@ dist/
 .git/
 coverage/
 .eslintcache
-.prettiercache
 *.test.ts
 *.test.tsx
 *.spec.ts

@@ -21,8 +21,7 @@
         "build": "tsc && vite build",
         "preview": "vite preview",
         "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
-        "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
-        "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,json}\""
+        "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix"
     },
     "eslintConfig": {
         "env": {
@@ -35,8 +34,7 @@
             "plugin:@typescript-eslint/recommended",
             "plugin:react/recommended",
             "plugin:react-hooks/recommended",
-            "plugin:jsx-a11y/recommended",
-            "prettier"
+            "plugin:jsx-a11y/recommended"
         ],
         "parser": "@typescript-eslint/parser",
         "parserOptions": {
@@ -90,12 +88,10 @@
         "@typescript-eslint/parser": "^8.58.1",
         "@vitejs/plugin-react": "^6.0.1",
         "eslint": "^8.57.0",
-        "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-jsdoc": "^62.9.0",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.0.1",
-        "prettier": "^3.0.0",
         "typescript": "^5.9.3",
         "vite": "^8.0.8"
     },

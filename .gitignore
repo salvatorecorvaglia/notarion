@@ -87,10 +87,9 @@ Thumbs.db
 *.temp
 
 # ==============================
-# ESLint / Prettier
+# ESLint
 # ==============================
 .eslintcache
-.prettiercache
 
 # ==============================
 # TypeScript (if used)
