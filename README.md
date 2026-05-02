@@ -17,27 +17,6 @@
 
 ---
 
-## 🛠️ Architecture
-
-Notarion follows a modern distributed architecture to balance performance with decentralization.
-
-```mermaid
-graph TD
-    User((User)) -->|Upload File| UI[React Frontend]
-    UI -->|API Request| API[Node.js Backend]
-    API -->|Validate & Store| IPFS[IPFS Node]
-    IPFS -->|Return CID| API
-    API -->|Check Duplicate| DB[(MongoDB)]
-    API -->|Return CID| UI
-    UI -->|Sign Transaction| BC[Ethereum Blockchain]
-    BC -->|Tx Hash| UI
-    UI -->|Finalize Metadata| API
-    API -->|Store Record| DB
-    UI -->|Generate PDF| UI
-```
-
----
-
 ## 🚦 Quick Start
 
 ### 📋 Prerequisites
