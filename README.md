@@ -102,11 +102,11 @@ npm start
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started.
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 🔐 Security
 
-If you discover a security vulnerability, please see our [Security Policy](SECURITY.md) for responsible disclosure instructions.
+If you discover a security vulnerability, please see our [Security Policy](SECURITY.md).
 
 ## 📝 License
 
@@ -114,8 +114,4 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ---
 
-## 👤 Author
-
-**Salvatore Corvaglia**
-
-- GitHub: [@salvatorecorvaglia](https://github.com/salvatorecorvaglia)
+**Author**: [Salvatore Corvaglia](https://github.com/salvatorecorvaglia)
