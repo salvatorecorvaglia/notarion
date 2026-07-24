@@ -22,7 +22,7 @@ ENV VITE_IPFS_GATEWAY_URL=$VITE_IPFS_GATEWAY_URL
 RUN npm run build
 
 # Stage 2: Serve
-FROM nginx:1.25-alpine
+FROM nginx:1.31.3-alpine
 
 # Copy built static assets from build stage
 COPY --from=build /app/dist /usr/share/nginx/html
