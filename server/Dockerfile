@@ -1,5 +1,5 @@
 # Stage 1: Build (TypeScript → JavaScript)
-FROM node:20.11-alpine AS build
+FROM node:20.20.2-alpine AS build
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ RUN npm run build
 RUN npm prune --omit=dev
 
 # Stage 2: Production runtime (JS only — no TypeScript compiler needed)
-FROM node:20.11-alpine AS production
+FROM node:20.20.2-alpine AS production
 
 WORKDIR /app
 
